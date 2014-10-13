@@ -2,13 +2,7 @@ package springbatch.basico.model;
 
 /**
  * SQL SCHEMMA
- * 
-	CREATE TABLE RAW_REPORT(
-			DATE VARCHAR(50),
-			IMPRESSIONS VARCHAR(50),
-			CLICKS VARCHAR(50),
-			EARNING VARCHAR(50));	
- *
+ * CREATE TABLE RAW_REPORT(`DATE` VARCHAR(50), IMPRESSIONS VARCHAR(50), CLICKS VARCHAR(50), EARNING VARCHAR(50)); *
  */
 public class Report {
 	private String Date;

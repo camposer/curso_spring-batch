@@ -1,0 +1,6 @@
+Cómo configurar Derby
+=====================
+
+1. Descargar derby-bin.zip (última versión)
+2. Descomprimir
+3. Ejecutar DERBY_HOME\bin\startNetworkServer.bat
