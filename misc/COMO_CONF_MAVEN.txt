@@ -1,0 +1,21 @@
+Configuración Maven
+===================
+
+1. Modificar (C:\Usuarios\Administrador\.m2\settings.xml):
+<settings>
+	<proxies>
+		<proxy>
+			<active>true</active>
+			<protocol>http</protocol>
+			<host>proxy.indra.es</host>
+			<username>NOMBRE_USUARIO</username>
+			<password>PASSWORD_USUARIO</password>		
+			<port>8080</port>
+		</proxy>
+	</proxies>
+</settings>
+
+2. Actualizar fichero de configuración en Eclipse. Ir a Window -> Preferences -> Maven -> User settings y especificar la ruta del fichero y hacer clic en "Update settings"
+	
+
+
