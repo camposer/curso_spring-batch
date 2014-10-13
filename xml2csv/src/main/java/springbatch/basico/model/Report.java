@@ -14,7 +14,7 @@ import springbatch.basico.adapter.JaxbDateAdapter;
 
 /**
  * DDL Derby:
- * CREATE TABLE report (refId INT PRIMARY KEY, name VARCHAR(50), age INT, dob DATE, income DECIMAL); 
+ * CREATE TABLE report (refId INT PRIMARY KEY, name VARCHAR(50), age INT, dob DATE, income DECIMAL(12, 2); 
  */
 @XmlRootElement(name = "record")
 public class Report {
