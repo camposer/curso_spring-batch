@@ -11,7 +11,8 @@
        http://www.springframework.org/schema/beans 
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<import resource="mysql-config.xml" />
+	<!-- import resource="mysql-config.xml" /-->
+	<import resource="derby-config.xml" />
 
 	<bean id="report" class="springbatch.basico.model.Report" scope="prototype" />
 
