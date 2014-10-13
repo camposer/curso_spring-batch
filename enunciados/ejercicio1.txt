@@ -5,6 +5,5 @@ Ahora mismo el proyecto xml2csv tiene una tarea que transforma un XML a CSV (exc
 
 1. Agregar un paso adicional que agregue los registros con edad > 29 a una tabla en BD; que deberá guardar correspondencia con los campos del fichero XML original. (step2)
 
-2. Agregar un decisor que si consiguiese un registro con edad < 0 haga fallar el job. Luego, añadir que la edad menor posible sea un parámetro del job.
+2. Agregar un paso adicional que escriba el income total (considerando el income en el XML) a un fichero CSV con el formato: totalIncome,TOTAL.
 
-3. Agregar un paso adicional que escriba income total a un fichero CSV con el formato: salary,TOTAL
