@@ -17,6 +17,9 @@
 	<bean id="report" class="springbatch.basico.model.Report" scope="prototype" />
 
 	<batch:job id="reportJob">
+		<batch:step id="step0" next="step1">
+			<batch:tasklet ref="truncate"/>
+		</batch:step>
 		<batch:step id="step1">
 			<batch:tasklet>
 				<batch:chunk reader="cvsFileItemReader" writer="mysqlItemWriter"
@@ -25,11 +28,16 @@
 			</batch:tasklet>
 		</batch:step>
 	</batch:job>
+	
+	<bean id="truncate"	class="springbatch.basico.tasklet.TruncateTasklet">
+		<property name="ds" ref="dataSource"/>
+	</bean>
 
 	<bean id="cvsFileItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
 
 		<!-- Read a csv file -->
 		<property name="resource" value="classpath:cvs/report.csv" />
+		<property name="linesToSkip" value="1"/>
 
 		<property name="lineMapper">
 			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
@@ -62,8 +70,8 @@
 		<property name="sql">
 			<value>
             <![CDATA[        
-            	insert into RAW_REPORT(DATE,IMPRESSIONS,CLICKS,EARNING) 
-			values (:date, :impressions, :clicks, :earning)
+	           	INSERT INTO RAW_REPORT(DATE,IMPRESSIONS,CLICKS,EARNING) 
+				VALUES (:date, :impressions, :clicks, :earning)
             ]]>
 			</value>
 		</property>
