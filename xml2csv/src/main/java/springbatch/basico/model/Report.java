@@ -12,9 +12,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import springbatch.basico.adapter.JaxbBigDecimalAdapter;
 import springbatch.basico.adapter.JaxbDateAdapter;
 
+/**
+ * DDL Derby:
+ * CREATE TABLE report (refId INT PRIMARY KEY, name VARCHAR(50), age INT, dob DATE, income DECIMAL); 
+ */
 @XmlRootElement(name = "record")
 public class Report {
-
+	
 	private int refId;
 	private String name;
 	private int age;

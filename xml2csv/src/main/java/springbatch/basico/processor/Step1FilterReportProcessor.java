@@ -4,7 +4,7 @@ import org.springframework.batch.item.ItemProcessor;
 
 import springbatch.basico.model.Report;
 
-public class FilterReportProcessor implements ItemProcessor<Report, Report> {
+public class Step1FilterReportProcessor implements ItemProcessor<Report, Report> {
 
 	@Override
 	public Report process(Report item) throws Exception {
